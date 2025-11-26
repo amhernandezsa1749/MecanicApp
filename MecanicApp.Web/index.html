@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>MecanicApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="MecanicApp" />
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn light" id="btnAbrirLogin">Iniciar sesión</button>
+                <button class="btn" id="btnAbrirRegistro">Registrarse</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Gestiona tus servicios mecánicos de forma sencilla</h1>
+            <a href="javascript:void(0)" class="btn" id="btnHeroLogin">Accede a tu cuenta</a>
+        </div>
+    </section>
+
+    <section class="info-boxes" id="servicios">
+        <div class="box">
+            <h2>Mi cuenta</h2>
+            <div id="panelCuentaUsuario" style="display:none;">
+                <p><strong>Nombre:</strong> <span id="cuentaNombre"></span></p>
+                <p><strong>Correo:</strong> <span id="cuentaCorreo"></span></p>
+                <p><strong>Teléfono:</strong> <span id="cuentaTelefono"></span></p>
+                <button class="btn" onclick="cerrarSesion()">Cerrar sesión</button>
+            </div>
+            <div id="panelCuentaVacio">
+                <p>No hay usuario conectado.</p>
+                <p>Inicia sesión para ver los datos de tu cuenta aquí.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Historial de servicios</h2>
+            <p>Consulta los trabajos realizados, fechas y detalles de cada servicio.</p>
+        </div>
+
+        <div class="box">
+            <h2>Recordatorios</h2>
+            <p>Recibe recordatorios para mantenimientos, revisiones y próximas citas.</p>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <p>Contacto: contacto@mecanicapp.com | Tel: 300 000 0000</p>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cerrarModal">&times;</span>
+
+            <div id="contenedorLogin">
+                <h2>Iniciar sesión</h2>
+                <form id="formInicio" class="formulario">
+                    <input id="loginCorreo" type="email" placeholder="Correo electrónico" required />
+                    <input id="loginPassword" type="password" placeholder="Contraseña" required />
+                    <button type="submit" class="btn">Entrar</button>
+                </form>
+                <p style="margin-top:10px; font-size:14px;">
+                    ¿No tienes cuenta?
+                    <a href="javascript:void(0)" id="linkIrRegistro">Registrarse</a>
+                </p>
+            </div>
+
+            <div id="contenedorRegistro" class="oculto">
+                <h2>Crear cuenta</h2>
+                <form id="formRegistro" class="formulario">
+                    <input id="regNombre" type="text" placeholder="Nombre completo" required />
+                    <input id="regCorreo" type="email" placeholder="Correo electrónico" required />
+                    <input id="regTelefono" type="tel" placeholder="Teléfono" required />
+                    <input id="regPassword" type="password" placeholder="Contraseña" required />
+                    <button type="submit" class="btn">Registrar</button>
+                </form>
+                <p style="margin-top:10px; font-size:14px;">
+                    ¿Ya tienes cuenta?
+                    <a href="javascript:void(0)" id="linkIrLogin">Iniciar sesión</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
