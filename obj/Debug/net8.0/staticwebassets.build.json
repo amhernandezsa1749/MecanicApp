@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "c9KBGwhbm7+ZavZ8DkgBJ74NzP65daRfaY7fZLob+g8=",
+  "Source": "MecanicApp.Api",
+  "BasePath": "_content/MecanicApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
